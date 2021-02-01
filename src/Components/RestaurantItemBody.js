@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/RestaurantListItem.css';
-import '../styles/Details.css';
 import {decideColor} from '../utils/decideColor';
 
 export default function RestaurantItemBody(props) {
