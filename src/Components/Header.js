@@ -10,7 +10,7 @@ export default function Header() {
           </div>
           <div className='App-title'>
           <Link className='App-title__link'to='/'>
-            Tomatoes
+            Zomato
             <br/> <small>&nbsp;Restaurant Finder</small>
           </Link>
           </div>

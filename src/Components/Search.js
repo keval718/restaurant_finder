@@ -26,24 +26,7 @@ const Search = (props) => {
       <div className='page-header'>
         <h2 className="page-header__title">Enter city</h2>
       </div>
-     
-         {/* // <input type="text" name="text"/> */}
-          {/* <input type="button" name="seactButton" onClick={findData}>Search</input> */}
-      {/* <div className='button-container'>
-        {
-          props.city.map((item, index)=>{
-            return <button key={index} 
-              onClick={(e)=>{
-              console.log(e.target.innerText);
-              props.dispatch(resetState());
-              props.dispatch(setCity(e.target.innerText));
-              props.dispatch(thunkRestaurants(e.target.innerText, 1));
-              props.dispatch(setLike());
-              props.history.push('/listing');
-            }} >{item}</button>
-          })
-        }
-      </div> */}
+      <div className="button-container">
       <form onSubmit={findData}>
   <label>
     Name:
@@ -51,13 +34,12 @@ const Search = (props) => {
   </label>
   <input type="submit" value="Submit" />
 </form>
+</div>
       
     </div>
   )
 }
 
-Search.defaultProps={
-  city: ['Pune', 'Bangalore', 'Delhi', 'Chennai']
-}
+
 
 export default connect()(Search);

@@ -90,3 +90,17 @@ a {
 .fa-fill{
     color:red;   
 }
+.res_address{
+    margin-left: 0.5em;
+    font-size: 17px;
+    padding: 0.2em;
+    color: black;
+    font-weight: 600;
+}
+.res_cusines{
+    margin-left: 0.5em;
+    font-size: 17px;
+    padding: 0.2em;
+    color: black;
+    font-weight: 600;
+}
