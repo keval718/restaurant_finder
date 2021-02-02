@@ -18,7 +18,7 @@ const RestaurantListItem = (props)=> {
             </div>  
             
             <div className='media-body'>
-              <RestaurantItemBody  address={props.restaurant.location.address} rating={props.restaurant.user_rating.aggregate_rating} cusines={props.restaurant.cuisines} votes={props.restaurant.user_rating.votes} reviews_count={props.review.reviews_count}/>       
+              <RestaurantItemBody name={props.restaurant.name} address={props.restaurant.location.address} rating={props.restaurant.user_rating.aggregate_rating} cusines={props.restaurant.cuisines} votes={props.restaurant.user_rating.votes} reviews_count={props.review.reviews_count}/>       
             </div>
       </div>
     
