@@ -1,13 +1,19 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import {
+  createStore,
+  applyMiddleware,
+  compose
+} from 'redux';
 import thunk from 'redux-thunk';
-import { restaurantReducer } from '../reducers/restaurant';
+import {
+  restaurantReducer
+} from '../reducers/restaurant';
 
-const composeEnhancers= window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
   const store = createStore(
-                  restaurantReducer,
-                  composeEnhancers(applyMiddleware(thunk))
+    restaurantReducer,
+    composeEnhancers(applyMiddleware(thunk))
   );
 
   return store;
