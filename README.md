@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+1.	How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- It took me around 4-5 hours for completing this coding assignment. So far because of shortage of time I have added search functionality where user can enter the city and it will retrieve all the restaurant’s name, image, address, rating, reviews from five from the Zomato API, Also I have added advance search functionality where user can search the restaurants by name, address, cuisines. I would further like to add like functionality and details functionality in which user can click on the image of the restaurant and it will open the detail page in which I would like to display images, name, address, cost for two, Reviews and ratings
+Process
+1)	I will create the detail component in which using props I will retrieve all the restaurant data 
+2)	I will pass the restaurant Id with the link here is the demo <link to={`/detail/${props.restaurant.id’}
 
-## Available Scripts
+2.	What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
-In the project directory, you can run:
+ searchClickevent(e) {
+    console.log(e.target.value);
+    if (e.target.value === "") {
+      this.setState(
+        (prevState) => {
+          return {
+            ...prevState,
+            filteredData: null,
+          };
+        },
+        () => {
+          console.log(this.state);
+        }
+      );
+    } else {
+      let data = this.props.restaurants.filter((eachrestaurant) => {
+        return (
+          eachrestaurant.restaurant.cuisines
+            .toLowerCase()
+            .includes(e.target.value) ||
+          eachrestaurant.restaurant.location.address
+            .toLowerCase()
+            .includes(e.target.value) ||
+          eachrestaurant.restaurant.name.toLowerCase().includes(e.target.value)
+        );
+      });
+      // console.log(data)
+      this.setState(
+        (prevState) => {
+          return {
+            ...prevState,
+            filteredData: data,
+          };
+        },
+        () => {
+          console.log(this.state);
+        }
+      );
+    }
 
-### `yarn start`
+ 
+3.	How would you track down a performance issue in production? Have you ever had to do this?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There are lot of factors affecting slowdown
+Overload server
+Slow web request
+Network Issue
+Code execution
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Yes I have done it by implementing worker threads in app which runs parallel
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4.	How would you improve the API that you just used?
+•	By using JSON serializer  eg protobuf-net
+•	By using compression techniques to compress the data that is transmitted over the wire
+•	By using faster data access strategies by not using using to much ORMs
+•	Use caching so that multiple request to API are eliminated
+•	Use Asynchronous methods
 
-### `yarn build`
+5.	Please describe yourself using JSON.
+{
+“name”:”keval”,
+“lastname”:”shah”,
+“age”:”23”,
+“resident”:”Canada”,
+“passion”:[
+“programming”,
+Vlogging],
+“interest”:[
+“stockmarket”,
+“cricket]
+}
+6) Avaibility for Interview
+  Monday: After 12PM
+   Tuesday: After 12PM,  
+Wednesday: After 12PM
+    Thursday: After 12PM,
+   Friday :11Am to 2.00Pm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
