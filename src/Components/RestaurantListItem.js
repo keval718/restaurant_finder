@@ -6,8 +6,6 @@ import RestaurantItemBody from '../Components/RestaurantItemBody';
 
 
 const photo = require('./notAvailable.png');
-
-
 const RestaurantListItem = (props)=> {
   return (
     

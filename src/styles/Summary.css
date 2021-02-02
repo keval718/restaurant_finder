@@ -9,7 +9,7 @@
     margin:0;
     margin-top: 0.3em; 
 }
-input[type=text] {
+input[type=text],select {
     width: 80%;
     padding: 15px 22px;
     margin: 10px 5px;
