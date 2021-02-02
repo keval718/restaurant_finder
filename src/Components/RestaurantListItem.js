@@ -3,9 +3,10 @@ import {Link} from 'react-router-dom';
 import '../styles/RestaurantListItem.css';
 import '../styles/Details.css';
 import RestaurantItemBody from '../Components/RestaurantItemBody';
+import photo from '../images/notAvailable.png'
 
 
-const photo = require('./notAvailable.png');
+
 const RestaurantListItem = (props)=> {
   return (
     

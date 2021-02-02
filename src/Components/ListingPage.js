@@ -20,17 +20,7 @@ class ListingPage extends Component {
     this.searchClickevent = this.searchClickevent.bind(this);
  
   }
-  // componentDidMount()
-  // {
-  //   console.log(this.props)
-  //   this.setState({
-  //     data:this.props
-  //   },()=>{
-  //     this.state.data.restaurants.filter(eachrestaurant=>{
-  //       console.log(eachrestaurant)
-  //     })
-  //   })
-  // }
+ 
 
   onScroll(){
   
@@ -154,11 +144,11 @@ else{
   }
 };
 
-const mapStateToProps =({restaurants, city, error, likes}, props)=>({
+const mapStateToProps =({restaurants, city, error}, props)=>({
     restaurants,
     city,
     error,
-    likes
+   
 })
 
 export default connect(mapStateToProps)(ListingPage);
