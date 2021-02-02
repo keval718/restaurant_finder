@@ -29,8 +29,7 @@ const Search = (props) => {
       <div className="button-container">
       <form onSubmit={findData}>
   <label>
-    Name:
-    <input type="text" name="name" onChange={(e)=>setstate(e.target.value)}/>
+    <input type="text" name="name" placeholder="Please Enter City Here.." onChange={(e)=>setstate(e.target.value)}/>
   </label>
   <input type="submit" value="Submit" />
 </form>
