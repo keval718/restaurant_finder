@@ -111,7 +111,7 @@ else{
               {
               
                 this.props.restaurants.map((rest, index) =>{
-                  return <RestaurantListItem key={index} {...rest}  likes={this.props.likes} {...this.props}/>
+                  return <RestaurantListItem key={index} {...rest}   {...this.props}/>
                 })
               }
           </InfiniteScroll> 
@@ -139,7 +139,7 @@ else{
             {
               
               this.state.filteredData.map((rest, index) =>{
-                return <RestaurantListItem key={index} {...rest}  likes={this.props.likes} {...this.state.filteredData}/>
+                return <RestaurantListItem key={index} {...rest}   {...this.state.filteredData}/>
               })
             }
         </div>
